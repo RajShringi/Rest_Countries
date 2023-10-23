@@ -1,0 +1,37 @@
+@import "../styles/variables";
+
+.loader-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader,
+.dark-loader {
+  width: 40px;
+  height: 40px;
+  border-left: 5px solid $light-Mode-Input;
+  border-right: 5px solid $light-Mode-Input;
+  border-bottom: 5px solid $light-Mode-Input;
+  border-top: 5px solid transparent;
+  border-radius: 100%;
+  animation: 1s ease 0s infinite loader;
+}
+
+.dark-loader {
+  border-left: 5px solid $dark-Mode-Text;
+  border-right: 5px solid $dark-Mode-Text;
+  border-bottom: 5px solid $dark-Mode-Text;
+  border-top: 5px solid transparent;
+}
+
+@keyframes loader {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}

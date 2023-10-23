@@ -1,0 +1,15 @@
+@import "../styles/variables";
+.error-page {
+  text-align: center;
+  font-size: clamp(14px, 1vw + 1rem, 34px);
+  color: $light-Mode-Input;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem auto;
+
+  ion-icon {
+    font-size: clamp(14px, 1vw + 1rem, 34px);
+    margin-right: 1rem;
+  }
+}

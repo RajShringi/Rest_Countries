@@ -60,7 +60,7 @@ const CountryProvider = ({ children }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const res =
-      await fetchCountries(`https://restcountries.com/v3.1/name/${searchedCountry}?fullText=true
+      await fetchCountries(`https://restcountries.com/v3.1/name/${searchedCountry.trim()}?fullText=true
     `);
 
     setFilterCountries(res);
@@ -74,6 +74,7 @@ const CountryProvider = ({ children }) => {
 
   const handleFilterCountries = () => {
     setFilterCountries(countries);
+    setRegion("Filter by Region");
     navigate("/");
   };
 
